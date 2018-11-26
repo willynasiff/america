@@ -7,6 +7,6 @@ dsps poner el directorio de la base de datos cuando se hace el connect
 
 https://github.com/willynasiff/america.git
 
-git push https://github.com/willynasiff/america.git
+git push -u https://github.com/willynasiff/america.git
 
 git clone -b pythonanywhere https://github.com/willynasiff/america.git
