@@ -10,3 +10,7 @@ https://github.com/willynasiff/america.git
 git push -u https://github.com/willynasiff/america.git
 
 git clone -b pythonanywhere https://github.com/willynasiff/america.git
+
+git checkout maestro templates/gastosPorMes.html
+copiar un archivo desde branch destino estando en branch destino ingresando branch origen
+
