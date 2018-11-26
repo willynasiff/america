@@ -1,14 +1,12 @@
-select * from Movimiento where strftime('%m', Fecha) = '11';
-
 para pythonanywhere. com 
 source code: /home/sklavenrechner/Repositorio
 working directory: /home/sklavenrechner
 
 dsps poner el directorio de la base de datos cuando se hace el connect
-/home/sklavenrechner/Repositorio/database/datosN.db
+/home/sklavenrechner/america/fuente/database/datos.db
 
-https://github.com/willynasiff/chifle.git
+https://github.com/willynasiff/america.git
 
-git push https://github.com/willynasiff/chifle.git
+git push -u origin pythonanywhere
 
-git clone -b pythonanywhere https://github.com/willynasiff/chifle.git
+git clone -b pythonanywhere https://github.com/willynasiff/america.git
