@@ -1,5 +1,3 @@
-select * from Movimiento where strftime('%m', Fecha) = '11';
-
 para pythonanywhere. com 
 source code: /home/sklavenrechner/Repositorio
 working directory: /home/sklavenrechner
