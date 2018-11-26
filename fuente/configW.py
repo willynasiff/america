@@ -1,3 +1,3 @@
 import time
-__database = 'fuente/database/datos.db'
-__month = time.localtime()[1]
+__database = '/home/sklavenrechner/america/fuente/database/datos.db'
+
