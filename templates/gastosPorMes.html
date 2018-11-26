@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+<title> Finanzas Americanas </title>
+
+ <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-    BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-  Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <meta name = "viewport" content = "width = device-width">
+
+</head>
+
+<body>
+<center><h1> Gastos del Mes {{ returning[0] }} </h1></center>
+<hr>
+<br>
+
+
+
+<form action="" method="post">
+<table align="center" border = "0" width="600">
+
+{% for each in returning[1] %}
+{% set comparador = each[0] %}
+<tr><td colspan = "4" align="center" height="120">
+  <font size="7" color = "blue">{{ each[1] }}</font>
+</td></tr> 
+  <tr>
+    <td height="60" align="center"><b>ID</b></td>
+    <td height="60" align="center"><b>Descripcion</b></td>
+    <td height="60" align="center"><b>Precio</b></td>
+    <td height="60" align="center"><b>Fecha</b></td>
+  </tr>
+  
+  {% set sumador = [] %}
+  {% for each2 in returning[2] %}  
+
+    {% if each2[4] == comparador %}
+
+      
+       <tr>
+       <td align="center" height="40"> {{ each2[0] }} </td>
+       <td align="center" height="40"> {{ each2[1] }} </td>
+       <td align="center" height="40"> {{ each2[2] }} </td>
+       <td align="center" height="40"> {{ each2[3] }} </td>
+       </tr>
+
+  {% if sumador.append(each2[2]) %}{% endif %}
+  
+    
+    {% endif %}
+  
+  {% endfor %}
+        
+        <tr><td>.</td></tr><tr><td>.</td></tr>     
+        <tr>
+        <td align="center" height="40" colspan="4"><b> Total: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {{ sumador|sum() }} </b></td>
+        </tr>
+        
+
+{% endfor %}
+
+
+
+<tr>
+<td colspan = "4" align="center" height="100">
+<input type="submit" value="Volver a Inicio" name="opcion">
+</td>
+</tr>
+  </table>
+<br><br><br><br><br><br>
+
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
