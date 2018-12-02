@@ -83,6 +83,7 @@
         {{ resultado }} </td></tr>
 
 
+
 </table>
 
 
@@ -100,6 +101,9 @@
 <tr><td align="center" height="40"> Todas las ganancias totales</td>
     <td>{% set resultado1 = returning[4][0] - returning[4][2] %}
         {{ resultado1 }} </td></tr>
+<tr><td align="center" height="40"> Lo mismo mas ahorros</td>
+    <td>{% set resultado2 = resultado1 + returning[4][1] %}
+        {{ resultado2 }} </td></tr>
 
 </table>
 
