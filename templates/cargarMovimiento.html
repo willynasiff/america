@@ -21,45 +21,37 @@
 <br>
 
 <form action="/cargarMovimiento" method="post">
-<table align="center">
-<td>
+<table align="center" border=1 width="600">
+<tr><td height="60" align="center">
 
-<p> Ingrese importe $
-<input type="number" value="0" name="importe" step="any"></p>
+Ingrese importe $ </td>
+<td height="60"><input type="number" value="0" name="importe" step="any"></td></tr>
 
-<p>Ingrese descripci&oacute;n<br>
-<input type="text" name="descripcion" size="50"></p>
-<br>
+<tr><td align="center" height="60">Ingrese descripci&oacute;n</td>
+<tr><td colspan="2" align="center"><input type="text" name="descripcion" size="50"></td>
 
-<p>Ingrese Tipo de Gasto
+
+<tr><td height="60" align="center">Ingrese Tipo de Gasto
 <select name="tipoGasto"> 
 {% for each in returning %}
   <option value="{{ each }}"> {{ each }} </option> 
 {% endfor %}
 </select>
-</p>
-<br><br>
+</td></tr>
 
-<p>Ingrese categor&iacute;a de Movimiento:<br>
+
+<tr><td height="60" align="center">Ingrese categor&iacute;a de Movimiento:</td></tr>
+<tr><td colspan="2" height="60" align="center">
 <input type="radio" name="categoria" value="1"> Ingreso Jackson
 <input type="radio" name="categoria" value="2"> Ingreso ahorros
 <input type="radio" name="categoria" value="3"> Compra mia
-<input type="radio" name="categoria" value="4"> Gasto papa </p>
-<br>
-<br><br>
+<input type="radio" name="categoria" value="4"> Gasto papa
+</td></tr>
 
 
-<input type="submit" value="Aceptar" name="cargar">
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<input type="submit" value="Volver inicio" name="cargar">
 
-</td>
+<tr><td height="60" align="center"><input type="submit" value="Aceptar" name="cargar"></td>
+<td height="60" align="center"><input type="submit" value="Volver inicio" name="cargar"></td>
 </table>
 </form>
 
