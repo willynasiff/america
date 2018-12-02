@@ -31,7 +31,8 @@ Ingrese importe $ </td>
 <tr><td colspan="2" align="center"><input type="text" name="descripcion" size="50"></td>
 
 
-<tr><td height="60" align="center">Ingrese Tipo de Gasto
+<tr><td height="60" align="center">Ingrese Tipo de Gasto</td>
+<td>
 <select name="tipoGasto"> 
 {% for each in returning %}
   <option value="{{ each }}"> {{ each }} </option> 
@@ -41,7 +42,7 @@ Ingrese importe $ </td>
 
 
 <tr><td height="60" align="center">Ingrese categor&iacute;a de Movimiento:</td></tr>
-<tr><td colspan="2" height="60" align="center">
+<tr><td colspan="2" align="center">
 <input type="radio" name="categoria" value="1"> Ingreso Jackson
 <input type="radio" name="categoria" value="2"> Ingreso ahorros
 <input type="radio" name="categoria" value="3"> Compra mia
