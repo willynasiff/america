@@ -14,7 +14,7 @@ def getGastosMensuales(mes):
     tuplear = [identificador, descripcion]
     tipoCategoria.append(tuplear)
 
-  if mes == 11 or mes == 12:
+  if mes == 12:
     ano = 8
   else:
     ano = 9
@@ -33,8 +33,35 @@ def getGastosMensuales(mes):
     lista = [identificador, descripcion, importe, fecha, idTipoCategoria]
     losGastos.append(lista)
         
+
+
+  sentencia2 = 'select sum(Importe) from Movimiento where fecha between "201{0}-{1}-01" and "201{0}-{1}-31" group by ID_Categoria'.format(ano, mes)
+
+
+  sumaGastos = []
+  for row in c.execute(sentencia2):
+    sumaGastosMios = float(row[0])
+
+    sumaGastos.append(sumaGastosMios)
+
+   
+  sentencia3 = 'select sum(Importe) from Movimiento group by ID_Categoria'
+
+  sumaGastosTotales = []
+  for row in c.execute(sentencia3):
+    sumaGastosMiosTotales = float(row[0])
+
+    sumaGastosTotales.append(sumaGastosMiosTotales)
+
+
+
+
+
+
+
+
  
-  gastosYCategorias = [mes, tipoCategoria, losGastos]
+  gastosYCategorias = [mes, tipoCategoria, losGastos, sumaGastos, sumaGastosTotales]
 
 #  print gastosYCategorias[1][0] se muestran todos los ides de categoria 
 #  print gastosYCategorias[1][1] se muestran todos los tipoCategoria
