@@ -66,15 +66,55 @@
 {% endfor %}
 
 
+  </table>
 
+
+<br><br><br><br><br><br>
+<table align="center" border = "0" width="500">
+
+<tr><td align="center" height="40"> Ingreso Jackson mensual </td>
+    <td> ${{ returning[3][0] }}</td></tr>
+<tr><td align="center" height="40"> Gastos mios mensual</td>
+    <td>${{ returning[3][2] }}</td></tr>
+<tr><td align="center" height="40"> Gastos papa mensual</td>
+    <td>${{ returning[3][3] }}</td></tr>
+<tr><td align="center" height="40"> Ganancia mensual</td>
+    <td>{% set resultado = returning[3][0] - returning[3][2] %}
+        {{ resultado }} </td></tr>
+
+
+</table>
+
+
+<br><br><br><br><br><br>
+<table align="center" border = "0" width="500">
+
+<tr><td align="center" height="40"> Todos los ingresos Jackson </td>
+    <td> ${{ returning[4][0] }}</td></tr>
+<tr><td align="center" height="40"> Todos los ahorros mios</td>
+    <td> ${{ returning[4][1] }}</td></tr>
+<tr><td align="center" height="40"> Total gastos mios en eeuu</td>
+    <td>${{ returning[4][2] }}</td></tr>
+<tr><td align="center" height="40"> Todos los gastos papa</td>
+    <td>${{ returning[4][3] }}</td></tr>
+<tr><td align="center" height="40"> Todas las ganancias totales</td>
+    <td>{% set resultado1 = returning[4][0] - returning[4][2] %}
+        {{ resultado1 }} </td></tr>
+
+</table>
+
+
+<br><br><br><br><br><br>
+<table align="center" border = "0" width="600">
 <tr>
 <td colspan = "4" align="center" height="100">
-<input type="submit" value="Volver a Inicio" name="opcion">
+<input type="submit" value="Volver a Inicio" name="opcion" style="height:50px;width:200px">
 </td>
 </tr>
-  </table>
-<br><br><br><br><br><br>
+</table>
 
+
+<br><br><br><br><br><br>
 </form>
 
 

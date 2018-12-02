@@ -21,17 +21,17 @@
 <br>
 
 <form action="/cargarMovimiento" method="post">
-<table align="center" border=1 width="600">
-<tr><td height="60" align="center">
+<table align="center" border="0" width="600">
+<tr><td height="60" style="text-indent:85px;">
 
 Ingrese importe $ </td>
 <td height="60"><input type="number" value="0" name="importe" step="any"></td></tr>
 
-<tr><td align="center" height="60">Ingrese descripci&oacute;n</td>
-<tr><td colspan="2" align="center"><input type="text" name="descripcion" size="50"></td>
+<tr><td style="text-indent:85px;" height="40" colspan="2" valign="bottom">Ingrese descripci&oacute;n</td>
+<tr><td colspan="2" align="center" height="60"><input type="text" name="descripcion" size="50"></td>
 
 
-<tr><td height="60" align="center">Ingrese Tipo de Gasto</td>
+<tr><td height="60" style="text-indent:85px;">Ingrese Tipo de Gasto</td>
 <td>
 <select name="tipoGasto"> 
 {% for each in returning %}
@@ -41,8 +41,8 @@ Ingrese importe $ </td>
 </td></tr>
 
 
-<tr><td height="60" align="center">Ingrese categor&iacute;a de Movimiento:</td></tr>
-<tr><td colspan="2" align="center">
+<tr><td height="40" style="text-indent:85px;" colspan="2" valign="bottom">Ingrese categor&iacute;a de Movimiento:</td></tr>
+<tr><td colspan="2" height="60" style="text-indent:80px;">
 <input type="radio" name="categoria" value="1"> Ingreso Jackson
 <input type="radio" name="categoria" value="2"> Ingreso ahorros
 <input type="radio" name="categoria" value="3"> Compra mia
@@ -51,8 +51,8 @@ Ingrese importe $ </td>
 
 
 
-<tr><td height="60" align="center"><input type="submit" value="Aceptar" name="cargar"></td>
-<td height="60" align="center"><input type="submit" value="Volver inicio" name="cargar"></td>
+<tr><td height="140" style="text-indent:80px;"><input type="submit" value="Aceptar" name="cargar" style="height:50px;width:100px"></td>
+<td align="center"><input type="submit" value="Volver inicio" name="cargar" style="height:50px;width:150px"></td>
 </table>
 </form>
 
