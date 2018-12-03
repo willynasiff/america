@@ -79,8 +79,20 @@
 <tr><td align="center" height="40"> Gastos papa mensual</td>
     <td>${{ returning[3][3] }}</td></tr>
 <tr><td align="center" height="40"> Ganancia mensual</td>
-    <td>{% set resultado = returning[3][0] - returning[3][2] %}
-        {{ resultado }} </td></tr>
+
+    {% if returning[3][0] and returning[3][2] %}
+    {% set resultado = returning[3][0] - returning[3][2] %}
+    <td>${{ resultado }}</td>    
+  
+    {% elif returning[3][0] %}
+    <td>${{ returning[3][0] }}</td>    
+
+    {% elif returning[3][2] %}
+    <td>${{ - returning[3][2] }}</td>
+
+    {% endif %}
+    </tr>
+
 
 
 
@@ -99,11 +111,38 @@
 <tr><td align="center" height="40"> Todos los gastos papa</td>
     <td>${{ returning[4][3] }}</td></tr>
 <tr><td align="center" height="40"> Todas las ganancias totales</td>
-    <td>{% set resultado1 = returning[4][0] - returning[4][2] %}
-        {{ resultado1 }} </td></tr>
+
+    {% if returning[4][0] and returning[4][2] %}
+    {% set resultado1 = returning[4][0] - returning[4][2] %}
+    <td>${{ resultado1 }}</td>    
+  
+    {% elif returning[4][0] %}
+    {% set resultado1 = returning[4][0] %}
+    <td>${{ resultado1 }}</td>    
+
+    {% elif returning[4][2] %}
+    {% set resultado1 = - returning[4][2] %}
+    <td>${{ resultado1 }}</td>
+
+    {% endif %}
+    </tr>
+
+
 <tr><td align="center" height="40"> Lo mismo mas ahorros</td>
-    <td>{% set resultado2 = resultado1 + returning[4][1] %}
-        {{ resultado2 }} </td></tr>
+
+    
+    {% if resultado1 and returning[4][1] %}
+    {% set resultado2 = resultado1 + returning[4][1] %}
+    <td>${{ resultado2 }}</td>    
+  
+    {% elif resultado1 %}
+    <td>${{ resultado1 }}</td>    
+
+    {% elif returning[4][1] %}
+    <td>${{ returning[4][1] }}</td>
+
+    {% endif %}
+    </tr>
 
 </table>
 
