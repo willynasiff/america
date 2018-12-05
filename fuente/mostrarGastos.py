@@ -24,7 +24,7 @@ def getGastosMensuales(mes):
   losGastos = []
 
   for row in c.execute(sentencia1):
-    identificador = id(row[0])
+    identificador = str(row[0])
     descripcion = str(row[1])
     importe = float(row[2])
     fecha = str(row[3])
@@ -110,7 +110,8 @@ def getGastosMensuales(mes):
 #  print gastosYCategorias[2][2] se muestra la segunda fila de los gastos
 #  print gastosYCategorias[2][1][0] se muestra el id de la primera fila
 
-  
   return gastosYCategorias
+
+#[12, [[1, 'Comida'], [2, 'Transportes'], [3, 'Alquiler'], [4, 'Comer afuera'], [5, 'Cosas varias'], [6, 'Ropa esqui']], [[27181400, 'anana', #11.0, '2018-12-05', 1]], [0, 0, 11.0], [0, 0, 11.0]]
 
 
