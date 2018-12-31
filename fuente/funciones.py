@@ -1,4 +1,4 @@
-import time
+import time, os
 
 def sacarNumero(lista):
   numero = ''
@@ -10,6 +10,8 @@ def sacarNumero(lista):
   return int(numero)
 
 def sacarFecha():
+  os.environ['TZ'] = 'US/Mountain'
+  time.tzset()
   year = str(time.localtime()[0])
   month = str(time.localtime()[1])
   day = str(time.localtime()[2])

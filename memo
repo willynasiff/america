@@ -16,3 +16,5 @@ copiar un archivo desde branch destino estando en branch destino ingresando bran
 
 UPDATE sqlite_sequence SET seq = (SELECT MAX(ID) FROM Movimiento) WHERE name="Movimiento";
 
+cp america/fuente/database/datos.db america/
+
