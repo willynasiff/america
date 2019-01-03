@@ -18,6 +18,7 @@ def getGastosMensuales(mes):
     ano = 8
   else:
     ano = 9
+    mes = "0{0}".format(mes)
 
   sentencia1 = 'select ID, Descripcion, Importe, Fecha, ID_TipoCategoria from Movimiento where fecha between "201{0}-{1}-01" and "201{0}-{1}-31" and ID_TipoCategoria !=0 order by ID_TipoCategoria'.format(ano, mes)
 
@@ -35,7 +36,7 @@ def getGastosMensuales(mes):
         
 
 
-  sentencia2 = 'select ID_Categoria, sum(Importe) from Movimiento where fecha between "201{0}-0{1}-01" and "201{0}-0{1}-31" group by ID_Categoria'.format(ano, mes)
+  sentencia2 = 'select ID_Categoria, sum(Importe) from Movimiento where fecha between "201{0}-{1}-01" and "201{0}-{1}-31" group by ID_Categoria'.format(ano, mes)
 
 
   sumaGastos = []
